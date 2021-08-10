@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  #092a69;
+}
+
+/* NAV BAR */
+#header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 10px 20px 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;  
+  background-color: #1a4480fa;;
+  width: 100%;
+  /* border-bottom: solid rgb(255, 255, 255) 1px; */
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 5px 10px;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 300px;
+}
+
+#nav-bar {
+  margin-bottom: 10px;
+}
+
+#nav-bar ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 50vw;
+}
+
+#nav-bar ul li a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.svg-mobile {
+  display: none;
+}
+
+/* END NAVBAR */
+
+#hero {
+  height: 40vw;
+  width: 100%;
+  margin-top: 125px;
+  background-image: url("https://assets.morningconsult.com/wp-uploads/2018/11/115th-congress.jpg");
+  background-size: cover;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+
+  background-color: #144180ad;
+  color: rgb(255, 255, 255);
+  width: fit-content;
+  padding: 5vw;
+  border: solid #b3ddff .2vw;
+  border-radius: 10px;
+}
+
+.card-style *:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#hero form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#email {
+  width: 70%;
+  color: #092a69;
+  font-size:small;
+  margin-bottom: 0px;
+}
+
+#submit {
+  width: 25%;
+  background-color: #73b3e7;
+  padding: 10px 5px;
+  border-style: none;
+  border-radius: 8px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: #04173a 0px 0px 200px;
+}
+
+/* FEATURES */
+
+#features {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 3vw;
+}
+
+.grid {
+  width: 30%;
+  display: flex;
+}
+
+.container svg{
+  fill: #b3ddff;
+  height: fit-content;
+  padding-right: 1vw;
+}
+
+/* VIDEO */
+
+#how-it-works { 
+  border: #b3ddff solid .4vw;
+  border-radius: 5px;
+  margin-bottom: 5vw;
+}
+
+#how-it-works iframe { 
+  width: 85vw; 
+}
+
+/* PRICING */
+
+#pricing {
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.product {
+  border: solid #b3ddff 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.5vw;
+  width: 25%;
+  overflow: hidden;
+}
+
+.level {
+  padding: 1vw;
+  border-bottom: solid white 1px;
+  width: 100%;
+  text-align: center;
+  background-color: #73b3e7;
+  font-weight: bold;
+}
+
+.inner-product {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.inner-product ol {
+  list-style: none;
+}
+
+.inner-product ol li {
+  margin: 10px;
+}
+
+.btn {
+  width: 25%;
+  background-color: #73b3e7;
+  padding: 10px 5px;
+  border-style: none;
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+/* footer */
+footer {
+  margin-top: 2vw;
+  width: 100%;
+  text-align: center;
+  background-color: #144180ad;
+  padding: 10px;
+  font-size: smaller;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 949px) {
+  /* NAV BAR */
+  .container {
+    box-shadow: none;
+  }
+
+  #nav-bar ul li a span{
+    display: none;
+  }
+
+  .svg-mobile {
+    display: block;
+    width: 40px;
+    height: auto;
+    fill: white;
+  }  
+
+  /* FEATURES */
+  #features {
+    margin-top: 2vw;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .grid {
+    width: 80%;
+    margin-bottom: 2vw;
+    align-items: center;
+  }
+  
+  /* PRICES */
+
+  #pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5vw;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 4vw;
+  }
+
+  .level {
+    padding: 1vw;
+    border-bottom: solid white 1px;
+    width: 100%;
+    text-align: center;
+    background-color: #73b3e7;
+    font-weight: bold;
+  }
+
+  .inner-product {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .inner-product ol {
+    list-style: none;
+  }
+
+  .inner-product ol li {
+    margin: 10px;
+  }
+
+  .btn {
+    width: 25%;
+    background-color: #73b3e7;
+    padding: 10px 5px;
+    border-style: none;
+    border-radius: 8px;
+    cursor:pointer;
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+  #hero {
+    height: fit-content;
+    width: 100%;
+    margin-top: 23%;
+    background-image: url("https://assets.morningconsult.com/wp-uploads/2018/11/115th-congress.jpg");
+    background-size: cover;
+  }
+
+  .card-style {
+    display: flex;
+
+    background-color: #14418085;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 5vw;
+    border: solid #b3ddff00 .2vw;
+    border-radius: 0px;
+  }
+
+  .card-style *:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  #hero form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #email {
+    margin-bottom: 10px;
+  }
+
+  #submit {
+    width: 50%;
+  }
+}
